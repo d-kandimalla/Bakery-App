@@ -5,6 +5,7 @@ import BarChartComponent from "../src/BarChartComponent";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import TimeSeriesChart from "./TimeSeriesChart";
 import BranchBarsChart from "./BranchBarsChart";
+import OrderComparison from "./OrderComparison";
 
 const ItemType = "BOX";
 
@@ -13,7 +14,7 @@ function DraggableComponent() {
     { id: 1, text: "Box 1", comp: <TimeSeriesChart /> },
     { id: 2, text: "Box 2", comp: <BarChartComponent /> },
     { id: 3, text: "Box 3", comp: <BranchBarsChart /> },
-    { id: 4, text: "Box 4", comp: <TimeSeriesChart /> },
+    { id: 4, text: "Box 4", comp: <OrderComparison /> },
   ]);
 
   const moveBox = (dragIndex, hoverIndex) => {

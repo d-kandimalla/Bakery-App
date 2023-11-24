@@ -14,8 +14,13 @@ import {
 
 function TimeSeriesChart() {
   // Sample data (replace with your order data)
+  //   const data = [
+  //     { date: "2023-01-01", orders: 10, totalValue: 1000 },
+  //     // Add more data points
+  //   ];
   const data = [
-    { date: "2023-01-01", orders: 10, totalValue: 1000 },
+    { date: "2023-01-01T00:00:00Z", orders: 10, totalValue: 1000 },
+    { date: "2023-01-01T01:00:00Z", orders: 590, totalValue: 1500 },
     // Add more data points
   ];
 
