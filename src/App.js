@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import AppBar from "./AppBar";
+import HomeScreen from "./HomeScreen";
+import Dashboard from "./Dashboard";
+import { Box, Container } from "@mui/material";
 
 function App() {
+  const [showHomeScreen, setShowHomeScreen] = useState(true);
+  const [showDashboard, setShowDashboard] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Box>
+        <AppBar
+          showHomeScreen={showHomeScreen}
+          setShowHomeScreen={setShowHomeScreen}
+          showDashboard={showDashboard}
+          setShowDashboard={setShowDashboard}
+        />
+        {showHomeScreen && !showDashboard && <HomeScreen />}
+        {!showHomeScreen && showDashboard && <Dashboard />}
+      </Box>
+    </>
   );
 }
 
